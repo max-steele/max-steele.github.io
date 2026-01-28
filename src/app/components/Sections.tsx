@@ -70,12 +70,12 @@ const contact: SectionProps = {
             </Link>
 
             <Link
-              href="https://max-steele.digital"
+              href="https://max-steele.github.io"
               className={style.ContactLink}
               {...external}
             >
               <span className={style.ContactIcon}>🌐</span>
-              <span>max-steele.digital</span>
+              <span>max-steele.github.io</span>
             </Link>
           </div>
         </>
