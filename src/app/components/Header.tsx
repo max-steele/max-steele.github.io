@@ -31,7 +31,6 @@ export const Header: React.FC<React.ComponentProps<"header">> = ({
           Paul G. Allen School of Computer Science & Engineering
         </Link>{" "}
         in Seattle, Washington.
-        My interests include data analytics and data visualization.
       </Txt>
     </div>
   </header>

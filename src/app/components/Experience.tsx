@@ -58,16 +58,41 @@ export const Experience: React.FC<
   </MotionDivWrapper>
 );
 
-const mongodb: ExperienceProps = {
+const tesla: ExperienceProps = {
   title: "Incoming Software Engineering Intern",
+  organization: "Tesla",
+  time: "Sept 2026 - Dec 2026",
+  location: "Palo Alto, CA",
+  descriptions: [
+    (
+      <>
+        <Txt size={5} fg={2} tag="p">
+          Low Voltage Architecture
+        </Txt>
+      </>
+    )
+  ]
+};
+
+const mongodb: ExperienceProps = {
+  title: "Software Engineer Intern",
   organization: "MongoDB",
-  time: "Nov 2025 - Present",
+  time: "June 2026 - Aug 2026",
   location: "New York, NY",
   descriptions: [
     (
       <>
         <Txt size={5} fg={2} tag="p">
-          Incoming Summer 2026
+          <Link href={"https://www.mongodb.com/products/capabilities/observability"} {...external}>
+            Customer Observability
+          </Link>      
+        </Txt>
+      </>
+    ),
+    (
+      <>
+        <Txt size={5} fg={2} tag="p">
+          Query Insights
         </Txt>
       </>
     )
@@ -149,8 +174,8 @@ const dhs: ExperienceProps = {
   ]
 };
 
-const peer_mentor: ExperienceProps = {
-  title: "Peer Mentor",
+const gearup: ExperienceProps = {
+  title: "Peer Mentor & Student Tutor",
   organization: "Washington State University GEAR-UP",
   time: "Sept 2022 - July 2023",
   location: "Kennewick, WA",
@@ -158,23 +183,7 @@ const peer_mentor: ExperienceProps = {
     (
       <>
         <Txt size={5} fg={2} tag="p">
-          Aided students in completing scholarship, financial aid, and college applications.
-        </Txt>
-      </>
-    )
-  ]
-};
-
-const tutor: ExperienceProps = {
-  title: "Student Tutor",
-  organization: "Washington State University GEAR-UP",
-  time: "Sept 2021 - June 2023",
-  location: "Kennewick, WA",
-  descriptions: [
-    (
-      <>
-        <Txt size={5} fg={2} tag="p">
-          Supported students with high school curriculum and AP coursework, and provided career-focused lessons.
+          Aided students in completing coursework, financial aid forms, and college applications.
         </Txt>
       </>
     )
@@ -182,10 +191,10 @@ const tutor: ExperienceProps = {
 };
 
 export const experiences: ExperienceProps[] = [
+  tesla,
   mongodb,
   highspot,
   pnnl,
   dhs,
-  peer_mentor,
-  tutor
+  gearup
 ];

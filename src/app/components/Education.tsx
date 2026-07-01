@@ -59,15 +59,15 @@ export const uw: EducationProps = {
     (
       <>
         <Txt size={5} fg={3} tag="p">
-          <b>GPA: 3.91</b>
+          <b>GPA: 3.90</b>
         </Txt>
       </>
     ),
     (
       <>
         <Txt size={5} fg={3} tag="p">
-          Relevant Coursework: Data Structures, Software Design, Systems Programming, Database
-          Management Systems, Hardware/Software Interface, Algorithms, Machine Learning, Linear Algebra
+          Relevant Coursework: Data Structures, Software Design, Systems Programming, Distributed Systems,
+          Operating Systems, Database Internals, Database Management Systems, Algorithms, Machine Learning
         </Txt>
       </>
     )
