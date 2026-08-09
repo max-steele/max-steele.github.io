@@ -92,7 +92,7 @@ const mongodb: ExperienceProps = {
     (
       <>
         <Txt size={5} fg={2} tag="p">
-          Query Insights
+          Developed cluster performance monitoring features for the Atlas Query Profiler.
         </Txt>
       </>
     )
@@ -149,31 +149,6 @@ const pnnl: ExperienceProps = {
   ]
 };
 
-const dhs: ExperienceProps = {
-  title: "Software Engineer Intern",
-  organization: "Pacific Northwest National Laboratory",
-  time: "June 2024 - Aug 2024",
-  location: "Richland, WA",
-  descriptions: [
-    (
-      <>
-        <Txt size={5} fg={2} tag="p">
-          <Link href={"https://www.pnnl.gov/foundational-data-science"} {...external}>
-            Foundational Data Science
-          </Link>
-        </Txt>
-      </>
-    ),
-    (
-      <>
-        <Txt size={5} fg={2} tag="p">
-          Built UIs for cloud-deployed analytics pipelines within the DHS-WIRED national security program.
-        </Txt>
-      </>
-    )
-  ]
-};
-
 const gearup: ExperienceProps = {
   title: "Peer Mentor & Student Tutor",
   organization: "Washington State University GEAR-UP",
@@ -195,6 +170,5 @@ export const experiences: ExperienceProps[] = [
   mongodb,
   highspot,
   pnnl,
-  dhs,
   gearup
 ];
