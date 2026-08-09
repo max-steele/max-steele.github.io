@@ -128,7 +128,7 @@ const pnnl: ExperienceProps = {
   title: "Software Engineer Intern",
   organization: "Pacific Northwest National Laboratory",
   time: "Sept 2024 - July 2025",
-  location: "Seattle, WA",
+  location: "Richland, WA",
   descriptions: [
     (
       <>
