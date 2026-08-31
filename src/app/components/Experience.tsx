@@ -59,7 +59,7 @@ export const Experience: React.FC<
 );
 
 const tesla: ExperienceProps = {
-  title: "Incoming Software Engineering Intern",
+  title: "Engineering Automation Software Engineer Intern",
   organization: "Tesla",
   time: "Sept 2026 - Dec 2026",
   location: "Palo Alto, CA",
@@ -67,7 +67,7 @@ const tesla: ExperienceProps = {
     (
       <>
         <Txt size={5} fg={2} tag="p">
-          Low Voltage Architecture
+          Vehicle Engineering &mdash; Low Voltage Architecture
         </Txt>
       </>
     )
@@ -92,7 +92,7 @@ const mongodb: ExperienceProps = {
     (
       <>
         <Txt size={5} fg={2} tag="p">
-          Developed cluster performance monitoring features for the Atlas Query Profiler.
+          Developed customer-facing query performance monitoring features for the Atlas Query Profiler.
         </Txt>
       </>
     )
@@ -150,11 +150,20 @@ const pnnl: ExperienceProps = {
 };
 
 const gearup: ExperienceProps = {
-  title: "Peer Mentor & Student Tutor",
+  title: "Peer Mentor, Student Tutor",
   organization: "Washington State University GEAR-UP",
-  time: "Sept 2022 - July 2023",
+  time: "Sept 2021 - July 2023",
   location: "Kennewick, WA",
   descriptions: [
+    (
+      <>
+        <Txt size={5} fg={2} tag="p">
+          <Link href={"https://tricities.wsu.edu/gearup/"} {...external}>
+            GEAR-UP Program
+          </Link>
+        </Txt>
+      </>
+    ),
     (
       <>
         <Txt size={5} fg={2} tag="p">

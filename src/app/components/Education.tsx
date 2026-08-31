@@ -59,7 +59,7 @@ export const uw: EducationProps = {
     (
       <>
         <Txt size={5} fg={3} tag="p">
-          <b>GPA: 3.90</b>
+          <b>GPA: 3.91</b>
         </Txt>
       </>
     ),
