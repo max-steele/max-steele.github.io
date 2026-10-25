@@ -20,24 +20,6 @@ export const Footer: React.FC<React.ComponentProps<"footer">> = ({
         <Spacer>-</Spacer>
         <Txt fg={1} bold>Max Steele</Txt>
       </Txt>
-      <Spacer>/</Spacer>
-      <Txt>
-        <Link href={"https://github.com/max-steele/personal-portfolio"} {...external}>
-          Coded with ♥
-        </Link>
-        {" using "}
-        <Link href={"https://react.dev/"} {...external}>
-          React
-        </Link>
-        {", "}
-        <Link href={"https://www.framer.com/motion/"} {...external}>
-          Framer Motion
-        </Link>
-        {", & "}
-        <Link href={"https://nextjs.org/"} {...external}>
-          Next.js
-        </Link>
-      </Txt>
     </Txt>
   </footer>
 );

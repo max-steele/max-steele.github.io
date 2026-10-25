@@ -12,7 +12,6 @@ export default function Home() {
       <ThemeToggle />
       <Header />
       <main className={cx(style.SectionLayout)}>
-        <Section {...sections.contact} />
         <Section {...sections.experience} />
         <Section {...sections.education} />
       </main>

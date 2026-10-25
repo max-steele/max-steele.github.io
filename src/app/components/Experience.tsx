@@ -1,10 +1,8 @@
 import { cx } from "../utils/joinClassNames";
-import { externalLinkAttributes as external } from "../utils/link";
 import style from "./Experience.module.css";
 
 import { Txt } from "./Text";
 import { MotionDivWrapper } from "./MotionDivWrapper";
-import Link from "next/link";
 import React, { ReactNode } from "react";
 
 type ExperienceProps = React.ComponentProps<
@@ -17,7 +15,6 @@ export const Experience: React.FC<
     organization: ReactNode;
     time: ReactNode;
     location: ReactNode;
-    descriptions: ReactNode[];
     image?: {
       src: string;
       alt: string;
@@ -29,7 +26,6 @@ export const Experience: React.FC<
   organization,
   time,
   location,
-  descriptions,
 }) => (
   <MotionDivWrapper>
     <div className={style.ExperienceContainer}>
@@ -48,55 +44,31 @@ export const Experience: React.FC<
             {location}
           </Txt>
         </div>
-        {descriptions.map((description, index) => (
-          <div key={index} className={cx(className, style.ExperienceDescription)}>
-            {description}
-          </div>
-        ))}
       </div>
     </div>
   </MotionDivWrapper>
 );
 
+const mongodb: ExperienceProps[] = [
+  {
+    title: "Incoming Software Engineer II",
+    organization: "MongoDB",
+    time: "Aug 2027",
+    location: "New York, NY",
+  },
+  {
+    title: "Software Engineer Intern",
+    organization: "MongoDB",
+    time: "June 2026 - Aug 2026",
+    location: "New York, NY",
+  }
+];
+
 const tesla: ExperienceProps = {
-  title: "Engineering Automation Software Engineer Intern",
+  title: "Software Engineer Intern",
   organization: "Tesla",
   time: "Sept 2026 - Dec 2026",
   location: "Palo Alto, CA",
-  descriptions: [
-    (
-      <>
-        <Txt size={5} fg={2} tag="p">
-          Vehicle Engineering &mdash; Low Voltage Architecture
-        </Txt>
-      </>
-    )
-  ]
-};
-
-const mongodb: ExperienceProps = {
-  title: "Software Engineer Intern",
-  organization: "MongoDB",
-  time: "June 2026 - Aug 2026",
-  location: "New York, NY",
-  descriptions: [
-    (
-      <>
-        <Txt size={5} fg={2} tag="p">
-          <Link href={"https://www.mongodb.com/products/capabilities/observability"} {...external}>
-            Customer Observability
-          </Link>      
-        </Txt>
-      </>
-    ),
-    (
-      <>
-        <Txt size={5} fg={2} tag="p">
-          Developed customer-facing query performance monitoring features for the Atlas Query Profiler.
-        </Txt>
-      </>
-    )
-  ]
 };
 
 const highspot: ExperienceProps = {
@@ -104,24 +76,6 @@ const highspot: ExperienceProps = {
   organization: "Highspot",
   time: "July 2025 - Sept 2025",
   location: "Seattle, WA",
-  descriptions: [
-    (
-      <>
-        <Txt size={5} fg={2} tag="p">
-          <Link href={"https://www.highspot.com/product/analytics/"} {...external}>
-            Data & Analytics
-          </Link>
-        </Txt>
-      </>
-    ),
-    (
-      <>
-        <Txt size={5} fg={2} tag="p">
-          Developed Agentic AI features for Nexus, Highspot&apos;s unified AI and Analytics engine.
-        </Txt>
-      </>
-    )
-  ]
 };
 
 const pnnl: ExperienceProps = {
@@ -129,55 +83,12 @@ const pnnl: ExperienceProps = {
   organization: "Pacific Northwest National Laboratory",
   time: "Sept 2024 - July 2025",
   location: "Richland, WA",
-  descriptions: [
-    (
-      <>
-        <Txt size={5} fg={2} tag="p">
-          <Link href={"https://www.pnnl.gov/ai-and-data-analytics"} {...external}>
-            AI & Data Analytics
-          </Link>
-        </Txt>
-      </>
-    ),
-    (
-      <>
-        <Txt size={5} fg={2} tag="p">
-          Developed data visualization web apps for NLP-based analytics modeling open-source scientific literature.
-        </Txt>
-      </>
-    )
-  ]
-};
-
-const gearup: ExperienceProps = {
-  title: "Peer Mentor, Student Tutor",
-  organization: "Washington State University GEAR-UP",
-  time: "Sept 2021 - July 2023",
-  location: "Kennewick, WA",
-  descriptions: [
-    (
-      <>
-        <Txt size={5} fg={2} tag="p">
-          <Link href={"https://tricities.wsu.edu/gearup/"} {...external}>
-            GEAR-UP Program
-          </Link>
-        </Txt>
-      </>
-    ),
-    (
-      <>
-        <Txt size={5} fg={2} tag="p">
-          Aided students in completing coursework, financial aid forms, and college applications.
-        </Txt>
-      </>
-    )
-  ]
 };
 
 export const experiences: ExperienceProps[] = [
+  mongodb[0],
   tesla,
-  mongodb,
+  mongodb[1],
   highspot,
   pnnl,
-  gearup
 ];

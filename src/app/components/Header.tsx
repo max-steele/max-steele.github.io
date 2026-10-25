@@ -32,6 +32,18 @@ export const Header: React.FC<React.ComponentProps<"header">> = ({
         </Link>{" "}
         in Seattle, Washington.
       </Txt>
+
+      <Txt tag="p" fg={2} className={style.ContactLinks}>
+        <Link href="https://linkedin.com/in/maxwell-steele" {...external}>
+          LinkedIn
+        </Link>
+        <span className={style.ContactSep} aria-hidden>·</span>
+        <Link href="mailto:msteele1@uw.edu">Email</Link>
+        <span className={style.ContactSep} aria-hidden>·</span>
+        <Link href="https://github.com/max-steele" {...external}>
+          GitHub
+        </Link>
+      </Txt>
     </div>
   </header>
 );

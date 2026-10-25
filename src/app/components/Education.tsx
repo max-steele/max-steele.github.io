@@ -15,7 +15,6 @@ export const Education: React.FC<
     organization: ReactNode;
     time: ReactNode;
     location: ReactNode;
-    descriptions: ReactNode[];
   }
 > = ({
   className,
@@ -23,7 +22,6 @@ export const Education: React.FC<
   organization,
   time,
   location,
-  descriptions,
 }) => (
   <MotionDivWrapper>
     <div className={style.EducationContent}>
@@ -41,11 +39,6 @@ export const Education: React.FC<
           {location}
         </Txt>
       </div>
-      {descriptions.map((description, index) => (
-        <div key={index} className={cx(className, style.EducationDescription)}>
-          {description}
-        </div>
-      ))}
     </div>
   </MotionDivWrapper>
 );
@@ -55,21 +48,4 @@ export const uw: EducationProps = {
   organization: "University of Washington",
   time: "Sept 2023 - June 2027",
   location: "Seattle, WA",
-  descriptions: [
-    (
-      <>
-        <Txt size={5} fg={3} tag="p">
-          <b>GPA: 3.91</b>
-        </Txt>
-      </>
-    ),
-    (
-      <>
-        <Txt size={5} fg={3} tag="p">
-          Relevant Coursework: Data Structures, Software Design, Systems Programming, Distributed Systems,
-          Operating Systems, Database Internals, Database Management Systems, Algorithms, Machine Learning
-        </Txt>
-      </>
-    )
-  ]
 };

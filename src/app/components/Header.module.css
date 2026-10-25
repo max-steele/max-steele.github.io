@@ -11,6 +11,17 @@
   text-wrap: balance;
 }
 
+.ContactLinks {
+  margin-top: 12px;
+  margin-bottom: 0;
+  padding-bottom: 16px;
+}
+
+.ContactSep {
+  margin: 0 0.4em;
+  color: var(--foreground-color-3);
+}
+
 .HeaderDetails {
   max-width: 640px;
 }
